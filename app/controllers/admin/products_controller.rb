@@ -6,7 +6,7 @@ class Admin::ProductsController < ApplicationController
   def index
     @products = Product.all
   end
-  
+
   def new
     @product = Product.new
   end
@@ -25,7 +25,8 @@ class Admin::ProductsController < ApplicationController
   end
 
   def update
-    @oroduct = Product.find(params[:id])
+    @product = Product.find(params[:id])
+
     if @product.update(product_params)
       redirect_to admin_products_path
     else
