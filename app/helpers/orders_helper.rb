@@ -3,7 +3,7 @@ module OrdersHelper
     if order.is_paid?
       "已付款"
     else
-      "未付款"
+      "未付款a"
     end
   end
 end
